@@ -1,0 +1,1 @@
+# qgis-plugin-od-lsa-loader
