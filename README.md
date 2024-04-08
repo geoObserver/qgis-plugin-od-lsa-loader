@@ -1,7 +1,7 @@
 # qgis-plugin-od-lsa-loader
 
-1. Test 
-1. Testtest
-1. 
----
-Test 5
+Das QGIS-„OD_LSA_Loader“-Plugin dient dem vereinfachten Laden von häufig genutzten Themen (WMS) aus dem [Open Data Portal des Landes Sachsen-Anhalt](https://www.lvermgeo.sachsen-anhalt.de/de/gdp-open-data.html) (LSA) [1] sowie Hintergrundkarten von [OpenStreetMap](https://www.openstreetmap.org/#map=12/51.4772/11.9516) [2] und der [Basemap.de](https://basemap.de/viewer/?config=eyJzdHlsZUlEIjowLCJleHRlcm5hbFN0eWxlVVJMIjoiIiwiem9vbSI6MTEuNzIsImxvbiI6MTEuOTU3OSwibGF0Ijo1MS40NzU4LCJwaXRjaCI6MCwiYmVhcmluZyI6MCwic2F0dXJhdGlvbiI6MCwiYnJpZ2h0bmVzcyI6MCwiY2hhbmdlZExheWVycyI6W10sImNoYW5nZWRTdWJHcm91cHMiOltdLCJoaWRkZW5TdWJHcm91cHMiOltdLCJoaWRkZW5MYXllcnMiOls5MSw5NCw0NjMsNDY1LDQ2OSw0OTMsNDk4LDEzNCwzNjQsMzQyLDMzMiwzMzMsMzM0LDUxMSw0NDYsMTY2LDE3MSwxNzYsMzgxLDQzOCw0MzldLCJoaWRkZW5Db250cm9scyI6WyJ6b29tbGV2ZWwiXX0=) [3]. „OD_LSA“ steht für „Open Data Land Sachsen Anhalt“. Den WMS mit Polygon-Themen werden automatisch mit einer Opazität von 0.75 versehen, sind also zu 25% transparent. 
+
+[1] … https://www.lvermgeo.sachsen-anhalt.de/de/gdp-open-data.html
+[2] … https://www.openstreetmap.org/#map=12/51.4772/11.9516
+[4] … [https://basemap.de/viewer/?config=eyJz… iXX0=](https://basemap.de/viewer/?config=eyJzdHlsZUlEIjowLCJleHRlcm5hbFN0eWxlVVJMIjoiIiwiem9vbSI6MTEuNzIsImxvbiI6MTEuOTU3OSwibGF0Ijo1MS40NzU4LCJwaXRjaCI6MCwiYmVhcmluZyI6MCwic2F0dXJhdGlvbiI6MCwiYnJpZ2h0bmVzcyI6MCwiY2hhbmdlZExheWVycyI6W10sImNoYW5nZWRTdWJHcm91cHMiOltdLCJoaWRkZW5TdWJHcm91cHMiOltdLCJoaWRkZW5MYXllcnMiOls5MSw5NCw0NjMsNDY1LDQ2OSw0OTMsNDk4LDEzNCwzNjQsMzQyLDMzMiwzMzMsMzM0LDUxMSw0NDYsMTY2LDE3MSwxNzYsMzgxLDQzOCw0MzldLCJoaWRkZW5Db250cm9scyI6WyJ6b29tbGV2ZWwiXX0=)
