@@ -10,3 +10,5 @@ tracker = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/issues/
 repository = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/
 homepage = https://geoobserver.de/od_lsa_loader/
 category = Plugins
+icon = OD_LSA_Loader_icon.png
+
