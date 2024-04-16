@@ -10,11 +10,12 @@ class OD_LSA_Loader:
     def initGui(self):
         self.startButtonT1 = QAction('—————————————————————————', self.iface.mainWindow())
         self.startButtonT2 = QAction('—————————————————————————', self.iface.mainWindow())
-        self.startButtonT3 = QAction('—————————————————————————', self.iface.mainWindow())
+        self.startButtonT3 = QAction('—— BONUS ——————————————————', self.iface.mainWindow())
 
         self.startButton10 = QAction('LSA: ALKIS Flurstücke (WMS)', self.iface.mainWindow())
         self.startButton11 = QAction('LSA: ALKIS Gebäude (WMS)', self.iface.mainWindow())
         self.startButton12 = QAction('LSA: ALKIS Tatsächliche Nutzung (WMS)', self.iface.mainWindow())
+        self.startButton15 = QAction('LSA: Bodenrichtwerte Bauland (WMS)', self.iface.mainWindow())
         self.startButton13 = QAction('LSA: ALKIS Flurstücke (WFS)', self.iface.mainWindow())
         self.startButton14 = QAction('LSA: ALKIS Gebäude (WFS)', self.iface.mainWindow())
         self.startButton50 = QAction('LSA: Digitale Orthophotos - DOP20 (WMS)', self.iface.mainWindow())
@@ -22,10 +23,12 @@ class OD_LSA_Loader:
         self.startButton90 = QAction('OSM-Hintergrundkarte  (XYZ)', self.iface.mainWindow())
         self.startButton91 = QAction('basemap.de-Hintergrundkarte grau (WMS)', self.iface.mainWindow())
         self.startButton92 = QAction('basemap.de-Hintergrundkarte farbig (WMS)', self.iface.mainWindow())
+        self.startButton93 = QAction('HAL: Digitale Stadtgrundkarte (WMS)', self.iface.mainWindow())
 
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton10)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton11)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton12)
+        self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton15)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButtonT1) # ------------
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton13)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton14)
@@ -36,17 +39,20 @@ class OD_LSA_Loader:
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton90)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton91)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton92)
+        self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton93)
 
         self.startButton10.triggered.connect(self.addWMS10)
         self.startButton11.triggered.connect(self.addWMS11)
         self.startButton12.triggered.connect(self.addWMS12)
         self.startButton13.triggered.connect(self.addWFS13)
         self.startButton14.triggered.connect(self.addWFS14)
+        self.startButton15.triggered.connect(self.addWMS15)
         self.startButton50.triggered.connect(self.addWMS50)
         self.startButton51.triggered.connect(self.addWMS51)
         self.startButton90.triggered.connect(self.addWMS90)
         self.startButton91.triggered.connect(self.addWMS91)
         self.startButton92.triggered.connect(self.addWMS92)
+        self.startButton93.triggered.connect(self.addWMS93)
             
     def unload(self):
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButtonT1)
@@ -56,11 +62,13 @@ class OD_LSA_Loader:
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton12)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton13)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton14)
+        self.iface.removePluginMenu('OD_LSA_Loader', self.startButton15)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton50)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton51)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton90)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton91)
         self.iface.removePluginMenu('OD_LSA_Loader', self.startButton92)
+        self.iface.removePluginMenu('OD_LSA_Loader', self.startButton93)
            
     def addWMS90(self):
         uri90 = '&type=xyz&url=https://tile.openstreetmap.org/{z}/{x}/{y}.png&zmax=19&zmin=0'
@@ -163,4 +171,15 @@ class OD_LSA_Loader:
         lyr14.setScaleBasedVisibility(1)
         QgsProject.instance().addMapLayer(lyr14)
       
+    def addWMS15(self):
+        uri15 = 'crs=EPSG:25832&dpiMode=7&format=image/png&layers=Bauland&styles&tilePixelRatio=0&url=https://www.geodatenportal.sachsen-anhalt.de/wss/service/ST_LVermGeo_BRW2022_gast/guest'
+        lyr15 = QgsRasterLayer(uri15, 'LSA: Bodenrichtwerte Bauland (WMS)', 'wms')
+        lyr15.renderer().setOpacity(0.75)
+        QgsProject.instance().addMapLayer(lyr15)
+        
+    def addWMS93(self):
+        uri15 = 'crs=EPSG:2398&dpiMode=7&format=image/png&layers=DSGK&styles&tilePixelRatio=0&url=http://geodienste.halle.de/opendata/f398a5d8-9dce-cbbc-b7ae-7e1a7f5bf809'
+        lyr15 = QgsRasterLayer(uri15, 'HAL: Digitale Stadtgrundkarte (WMS)', 'wms')
+        lyr15.renderer().setOpacity(0.75)
+        QgsProject.instance().addMapLayer(lyr15)
         
