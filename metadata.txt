@@ -4,8 +4,8 @@ email = news@geoobserver.de
 author = Mike Elstermann (The #geoObserver)
 qgisMinimumVersion = 3.0
 description = OD_LSA_Loader (Open Data Land Sachsen Anhalt Loader)
-about = Fügt WMS-Dienste aus dem <a href="https://www.lvermgeo.sachsen-anhalt.de/de/gdp-open-data.html">Open Data Portal des Landes Sachsen-Anhalt (LSA)</a> sowie Hintergrundkarten (OSM, Basemap.de) dem aktuellen View hinzu. Mehr Informationen auf <a href="https://geoobserver.wordpress.com/od_lsa_loader/">OD_LSA_Loader auf www.geoObserver.de</a></br><ul><li>v0.0.1 ... Initiale Version</li><li>v0.0.2 ... ALKIS Nutzungsthemen als einzelne Layer</li><li>v0.0.3 ... ALKIS Nutzungsthemen als Gruppe</li><li>v0.0.4 ... ALKIS WFS für Flurstücke und Gebäude (bis 1:25000)</li><li>v0.0.5 ... Bodenrichtwerte, Digitale Stadtgrundkarte Halle (Saale)</li></ul>
-version = 0.0.5 
+about = Fügt WMS-/WFS-Dienste aus dem <a href="https://www.lvermgeo.sachsen-anhalt.de/de/gdp-open-data.html">Open Data Portal des Landes Sachsen-Anhalt (LSA)</a> sowie Hintergrundkarten (OSM, Basemap.de) dem aktuellen View hinzu. Mehr Informationen auf <a href="https://geoobserver.de/od_lsa_loader/">OD_LSA_Loader auf geoObserver.de</a></br><ul><li>v0.0.1 ... Initiale Version</li><li>v0.0.2 ... ALKIS Nutzungsthemen als einzelne Layer</li><li>v0.0.3 ... ALKIS Nutzungsthemen als Gruppe</li><li>v0.0.4 ... ALKIS WFS für Flurstücke und Gebäude (bis 1:25000)</li><li>v0.0.5 ... Bodenrichtwerte, BONUS: WMS Digitale Stadtgrundkarte Halle (Saale)</li><li>v0.0.6 ... Abfangen ungültiger Layer</li></ul>
+version = 0.0.6
 icon = OD_LSA_Loader_icon.png
 tracker = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/issues/
 repository = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/
