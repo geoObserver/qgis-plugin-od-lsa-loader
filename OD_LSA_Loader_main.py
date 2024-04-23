@@ -78,7 +78,8 @@ class OD_LSA_Loader:
             iface.messageBar().pushCritical('OD_LSA_Loader', u'Fehler beim Laden des Layers OSM Hintergrundkarte (XYZ), Dienst nicht verfügbar (URL?)')        
         else:
             QgsProject.instance().addMapLayer(lyr90)
-            iface.messageBar().pushInfo('OD_LSA_Loader', 'Layer OSM Hintergrundkarte (XYZ) erfolgreich geladen.')
+            #iface.messageBar().pushInfo('OD_LSA_Loader', 'Layer OSM Hintergrundkarte (XYZ) erfolgreich geladen.')
+            iface.messageBar().pushMessage('OD_LSA_Loader', 'Layer OSM Hintergrundkarte (XYZ) erfolgreich geladen.')
                         
     def addWMS91(self):
         uri91 = 'crs=EPSG:3857&dpiMode=7&format=image/png&layers=de_basemapde_web_raster_grau&styles&tilePixelRatio=0&url=https://sgx.geodatenzentrum.de/wms_basemapde?REQUEST%3DGetCapabilities%26Version%3D1.3.0'
@@ -235,7 +236,7 @@ class OD_LSA_Loader:
     def addWMS93(self):
         uri93 = 'crs=EPSG:2398&dpiMode=7&format=image/png&layers=DSGK&styles&tilePixelRatio=0&url=http://geodienste.halle.de/opendata/f398a5d8-9dce-cbbc-b7ae-7e1a7f5bf809'
         lyr93 = QgsRasterLayer(uri93, 'HAL: Digitale Stadtgrundkarte (WMS)', 'wms')
-        if not lyr15.isValid():
+        if not lyr93.isValid():
             iface.messageBar().pushCritical('OD_LSA_Loader', u'Fehler beim Laden des Layers HAL: Digitale Stadtgrundkarte (WMS), Dienst nicht verfügbar (URL?)')        
         else:
             lyr93.renderer().setOpacity(0.75)
