@@ -10,7 +10,7 @@ class OD_LSA_Loader:
     def initGui(self):        
         self.startButtonT1 = QAction('—————————————————————————', self.iface.mainWindow())
         self.startButtonT2 = QAction('—————————————————————————', self.iface.mainWindow())
-        self.startButtonT3 = QAction('—— BONUS ——————————————————', self.iface.mainWindow())
+        self.startButtonT3 = QAction('—————————————————————————', self.iface.mainWindow())
 
         self.startButton10 = QAction('LSA: ALKIS Flurstücke (WMS)', self.iface.mainWindow())
         self.startButton11 = QAction('LSA: ALKIS Gebäude (WMS)', self.iface.mainWindow())
@@ -23,7 +23,7 @@ class OD_LSA_Loader:
         self.startButton90 = QAction('OSM-Hintergrundkarte  (XYZ)', self.iface.mainWindow())
         self.startButton91 = QAction('basemap.de-Hintergrundkarte grau (WMS)', self.iface.mainWindow())
         self.startButton92 = QAction('basemap.de-Hintergrundkarte farbig (WMS)', self.iface.mainWindow())
-        self.startButton93 = QAction('HAL: Digitale Stadtgrundkarte (WMS)', self.iface.mainWindow())
+        self.startButton93 = QAction('BONUS! HAL: Digitale Stadtgrundkarte (WMS)', self.iface.mainWindow())
 
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton10)
         self.iface.addPluginToMenu('OD_LSA_Loader', self.startButton11)
