@@ -1,17 +1,18 @@
 [general]
 name = OD_LSA_Loader
 email = news@geoobserver.de
-author = Mike Elstermann (The #geoObserver)
+author = Mike Elstermann (#geoObserver)
 qgisMinimumVersion = 3.0
 description = OD_LSA_Loader (Open Data Land Sachsen Anhalt Loader)
 about = Das Plugin vereinfacht das Einfügen der  WMS-/WFS-Dienste aus dem <a href="https://www.lvermgeo.sachsen-anhalt.de/de/gdp-open-data.html">Open Data Portal des Landes Sachsen-Anhalt (LSA)</a> sowie von Hintergrundkarten (OSM, Basemap.de) zum aktuellen View. Als Bonus kann der WMS der Digitalen Stadtgrundkarte der Stadt Halle (Saale) eingebunden werden. Mehr Informationen zum OD_LSA_Loader auf <a href="https://geoobserver.de/od_lsa_loader/">geoObserver.de</a></br>
-version = 0.0.6
+version = 0.0.7
 changelog = 0.0.1 ... Initiale Version
-	0.0.2 ... ALKIS Nutzungsthemen als einzelne Layer
+	0.0.2 ... neue Themen: ALKIS Nutzungsthemen als einzelne Layer
 	0.0.3 ... ALKIS Nutzungsthemen als Gruppe
-	0.0.4 ... ALKIS WFS für Flurstücke und Gebäude (bis 1:25000)
-	0.0.5 ... Bodenrichtwerte, BONUS: WMS Digitale Stadtgrundkarte Halle (Saale)
-	0.0.6 ... Abfangen ungültiger URLs der Layer
+	0.0.4 ... neue Themen: ALKIS WFS für Flurstücke und Gebäude (bis 1:25000)
+	0.0.5 ... neue Themen: Bodenrichtwerte, BONUS: WMS Digitale Stadtgrundkarte Halle (Saale)
+	0.0.6 ... Abfangen ungültiger Dienste-URLs der Layer
+	0.0.7 ... neue Themen: Topografische Karten (TK 10, 25 50, 100, TÜK 250), Codebereinigung
 icon = OD_LSA_Loader_icon.png
 tracker = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/issues/
 repository = https://github.com/geoObserver/qgis-plugin-od-lsa-loader/
